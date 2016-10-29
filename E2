@@ -1,0 +1,12 @@
+ nr = input('Numarul de elemente ale vectorului este = ');
+ ok = 0;
+ vector = normrnd(1:nr,1:nr)
+  for i=1:nr
+     if( vector(i)<0 )
+         vector(i)
+         ok = 1;
+     end
+  end
+ if( ok == 0 )
+    disp('Nu s-au generat numere negative')
+ end
