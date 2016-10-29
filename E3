@@ -1,0 +1,23 @@
+nr = input( ' Numarul de elemente ale vectorului este: ');
+disp ( ' ' )
+sumareale = 0;
+partireale = 0;
+
+for i = 1:nr
+    a = rand;
+    b = 1i*rand;
+    c = a + b;
+    sumareale = sumareale + a;
+    partireale = partireale + 1;
+    v(i) = [c];   
+end
+
+disp ( ' Media aritmetica a partilor reale este : ')
+disp ( sumareale/partireale )
+
+disp ( ' Elementele vectorului initial la patrat sunt: ' )
+disp ( v.^2 )
+
+disp ( ' Matricea obtinuta din inmultirea vectorului initial cu transpusul sau: ' )
+w=v.';
+disp ( w*v )
