@@ -1,0 +1,51 @@
+1. Semnal dreptunghiular periodic cu: Perioadă: 2 s.  Factor de umplere: 25%.  Nivel maxim: +0.5.  Nivel minim: -1. 
+
+x = [0   0.5 0.5  1  2   2 2.5 2.5  3  4   4 4.5 4.5   5  6   6]
+y = [0.5 0.5  -1 -1 -1 0.5 0.5  -1 -1 -1 0.5 0.5   -1 -1 -1 0.5]
+
+plot(x,y,'.-'),grid
+xlabel( 'Timp[s]' )
+title( 'Semnal dreptunghiular de perioada 2s, factor de umplere 25%, nivel maxim +0.5, nivel minim -1' )
+ 
+2. Semnal triunghiular periodic:  Perioadă: 5 s.  Nivel maxim: +1.  Nivel minim: -2.  Panta+ 1 V/s Observaţie: Panta–  [V/s] rezultă din calcule
+
+x = [0 2 5 7 10 12 15 17 20 22 25 27 30]
+y = [-2 1 -2 1 -2 1 -2 1 -2 1 -2 1 -2]
+
+plot(x,y)
+xlabel( 'Timp[s]' )
+title( 'Semnal triunghiular de perioada 5s, nivel maxim +1, nivel minim -2' )
+
+4. Semnal sinusoidal redresat mono alternanţă: Perioada semnalului sinusoidal iniţial (neredresat) 3 s.  Amplitudine: 0.8.
+
+F = 25;
+t = 0:0.0002:0.2;
+for i = 1:200
+    s = 0.8*sin(2*pi*F*t);
+    if( s(i)<0 )
+        s(i) = 0;
+    end
+end
+
+plot( t,s,'.-' );
+axis( [0 0.2 0 0.8] )
+xlabel( 'Timp [s]' ),grid
+title( 'Semnal sinusoidal redresat mono alternanta de perioada 3s si amplitudine 0.8' );
+
+5. Semnal sinusoidal redresat dublă alternanţă: Perioada semnalului sinusoidal neredresat: 4 s.  Amplitudine: 1.5.
+
+F = 25;
+t = 0:0.0002:0.2;
+for i = 1:200
+    s = 0.8*sin(2*pi*F*t);
+    if( s(i)<0 )
+        abs(s(i));
+    end
+end
+
+
+plot( t,s,'.-' );
+axis( [0 0.2 0 0.8] )
+xlabel( 'Timp [s]' ),grid
+title( 'Semnal sinusoidal redresat mono alternanta de perioada 3s si amplitudine 0.8' );
+
