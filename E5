@@ -1,0 +1,41 @@
+F = 50;
+t = 0:0.001:0.2;
+s = 2*sin(2*pi*F*t);
+plot(t,s,'.-'),xlabel('Timp [s]'),grid
+
+a) Modificaţi pasul de variaţie a variabilei t la 0.01 şi apoi la 0.0002. Comentaţi diferenţele. 
+F = 50;
+t = 0:0.01:0.2;
+s = 2*sin(2*pi*F*t);
+plot(t,s,'.-');
+xlabel('Timp [s]');grid
+
+Graficul nu arata ca un semnal sinusoidal deoarece nu sunt suficiente valori in intervalul ( 0;0.2) pentru o interpretare adecvata.
+
+F = 50;
+t = 0:0.0002:0.2;
+s = 2*sin(2*pi*F*t);
+plot(t,s,'.-');
+xlabel('Timp [s]');grid
+
+Graficul arata ca un semnal sinusoidal deoarece sunt suficiente valori.
+
+b)Măsuraţi pe grafic perioada semnalului sinusoidal în cele 3 situaţii. 
+Pentru t = 0:0.001:0.2; perioada este de 0.02s.
+Pentru t = 0:0.01:0.2; perioada nu poate fi masurata.
+Pentru t = 0:0.0002:0.2; perioada este de 0.02s.
+
+c)
+F1 = 50;
+F2 = 20;
+
+t = 0:0.001:0.2;
+
+s = 2*sin(2*pi*F1*t);
+c = 2*cos(2*pi*F2*t);
+
+plot( t,s,'.-' );
+xlabel('Timp [s]')
+hold on;
+plot( t,c,'r.-' ),grid;
+hold off;
