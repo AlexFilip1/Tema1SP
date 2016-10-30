@@ -1,0 +1,13 @@
+Fs = 12000;
+N = 0.5*12;
+n = 0:N-1; %n = 0:5 sau n = 1:6
+
+for i = 1:24
+    if mod(i,2) == 0 ;
+        v(i) = 1;
+    end
+end
+
+plot( v );
+xlabel( 'Timp[ms]*4' )
+
